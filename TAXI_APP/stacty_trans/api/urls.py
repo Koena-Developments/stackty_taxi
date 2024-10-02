@@ -10,5 +10,5 @@ router.register(r'taxi-drivers', TaxiDriverViewSet)
 router.register(r'fare-rides', FareRideViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]
