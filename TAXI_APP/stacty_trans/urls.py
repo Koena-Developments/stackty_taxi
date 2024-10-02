@@ -1,6 +1,12 @@
 from django.urls import path
-from .views import home_page
+from .VIEWS.Taxi_Driver import TaxiDriverViewSet
+from .VIEWS.auth_views import LoginView, LogoutView
+
 
 urlpatterns = [
-    path('home', home_page, name='home'),
+    path('api/login/', LoginView.as_view(), name='login'),
+    path('api/logout/', LogoutView.as_view(), name='logout'),
+    path('home', TaxiDriverViewSet, name='home'),
+     
+
 ]
