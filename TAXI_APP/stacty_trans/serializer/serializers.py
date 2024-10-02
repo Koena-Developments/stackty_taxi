@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import User, Taxi_Driver, Fare_ride
+from ..models import User, Taxi_Driver, Fare_ride
 
 
 class UserSerializer(serializers.ModelSerializer):
