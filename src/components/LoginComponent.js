@@ -1,6 +1,6 @@
 // src/components/LoginComponent.js
 import React, { useState } from 'react';
-import { loginUser } from '../services/authService';
+import { loginUser } from '../services/authServices';
 
 const LoginComponent = () => {
     const [username, setUsername] = useState('');
@@ -10,9 +10,10 @@ const LoginComponent = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
+        console.log(setUsername);
         try {
             await loginUser(username, password);
-            // we should do something here like render UI components based off the logins
+           console.log("WELCOME TO STACKY")
         } catch (error) {
             setError("Login failed: Invalid credentials.");
         }
