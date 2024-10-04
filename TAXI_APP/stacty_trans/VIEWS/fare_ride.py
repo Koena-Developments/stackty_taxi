@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from stacty_trans.models import Fare_ride
-from TAXI_APP.stacty_trans.serializer.serializers import FareRideSerializer
+from stacty_trans.serializer.serializers import FareRideSerializer
 
 
 
