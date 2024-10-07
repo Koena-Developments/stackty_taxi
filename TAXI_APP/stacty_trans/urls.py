@@ -4,6 +4,7 @@ from .VIEWS.fare_ride import FareRideViewSet
 from .VIEWS.auth_views import LoginView, LogoutView
 from .VIEWS.Taxi_Driver import TaxiDriverViewSet
 from .VIEWS.user_views import UserViewSet
+from .VIEWS import SignUpView
 
 # Create a router instance
 router = DefaultRouter()
@@ -17,5 +18,6 @@ router.register(r'farerides', FareRideViewSet, basename='fareride')
 urlpatterns = [
     path('', include(router.urls)),  
     path('login/', LoginView.as_view(), name='login'),  
-    path('logout/', LogoutView.as_view(), name='logout')
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('signup/', SignUpView.as_view(), name='signup')
 ]
